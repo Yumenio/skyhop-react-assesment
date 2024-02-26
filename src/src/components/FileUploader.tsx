@@ -22,7 +22,7 @@ const FileUploader: React.FC = () => {
             isDragActive ? <p>Drop the file here</p> : <p>Drag & Drop Here, or <b>Browse</b></p>
         )}
       </div>
-      <button className="mt-2 px-4 py-2 bg-blue-900 bg-skyhopBlue text-white cursor-pointer rounded-lg" onClick={() => document.getElementById('fileInput')?.click()}>
+      <button className="mt-2 px-4 py-2 bg-skyhopBlue text-white cursor-pointer rounded-lg" onClick={() => document.getElementById('fileInput')?.click()}>
         Upload Manifest
       </button>
       <input
