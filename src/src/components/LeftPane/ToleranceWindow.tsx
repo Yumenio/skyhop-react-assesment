@@ -28,7 +28,7 @@ const ToleranceWindow = () => {
           onClick={handleSelectDay}
           disabled={!toggleOn}
         >
-          <FaClock className={`text-${toggleOn ? 'skyhopBlue' : 'red'}-500 mr-2`} />
+          <FaClock className={"text-skyhopBlue mr-2"} />
           Select Tolerance Level
         </button>
       </div>
