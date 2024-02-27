@@ -1,13 +1,18 @@
 import React from 'react'
 import './App.css'
-import FileUploader from './components/FileUploader'
+import FileUploader from './components/LeftPane/FileUploader'
+import LeftPane from './components/LeftPane'
+import RightPane from './components/RightPane'
 
 function App() {
   return (
-    <div className='App'>
-      <h1 className=' text-3xl font-bold'>Document Upload</h1>
+    <div className='min-h-screen'>
+      <h1 className='text-center text-3xl font-bold'>Document Upload</h1>
       <hr />
-      <FileUploader />
+      <div className="flex justify-center space-x-4">
+        <LeftPane/>
+        <RightPane/>
+      </div>
     </div>
   )
 }

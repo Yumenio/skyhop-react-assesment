@@ -32,12 +32,14 @@ const FileUploader: React.FC = () => {
             </p>
           )}
         </div>
-        <button
-          className='mt-2 px-4 py-2 bg-skyhopBlue text-white cursor-pointer rounded-lg'
-          onClick={() => document.getElementById('fileInput')?.click()}
-        >
-          Upload Manifest
-        </button>
+        <div className="flex justify-center">
+          <button
+            className='mt-2 w-3/5 px-4 py-2 bg-skyhopBlue text-white cursor-pointer rounded-lg'
+            onClick={() => document.getElementById('fileInput')?.click()}
+            >
+            Upload Manifest
+          </button>
+        </div>
         <input
           id='fileInput'
           type='file'
