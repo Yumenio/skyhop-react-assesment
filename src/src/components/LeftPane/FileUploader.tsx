@@ -1,6 +1,7 @@
 // FileUpload.tsx
 import React, { useCallback, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
+import PaneSectionHeader from '../Common/PaneSectionHeader'
 
 const FileUploader: React.FC = () => {
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null)
@@ -13,11 +14,12 @@ const FileUploader: React.FC = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
   return (
-    <div className='flex flex-col items-center mt-4'>
-      <div className="border-2 rounded-lg w-[400px] h-[300px]">
+    <div className='mt-4'>
+      <PaneSectionHeader title="Select a manifest you'd like to import" />
+      <div className="flex flex-col items-center border-2 rounded-lg w-11/12 h-[200px] p-4">
         <div
           {...getRootProps()}
-          className={`border-dashed border-2 rounded-lg border-gray-300 p-4 cursor-pointer relative flex items-center justify-center text-center ${isDragActive ? 'border-blue-500' : ''}`}
+          className={`border-dashed border-2 rounded-lg border-gray-300 w-full h-full cursor-pointer relative flex items-center justify-center text-center ${isDragActive ? 'border-blue-500' : ''}`}
         >
           <input {...getInputProps()} />
           {uploadedFileName ? (
@@ -28,18 +30,16 @@ const FileUploader: React.FC = () => {
             <p>Drop the file here</p>
           ) : (
             <p>
-              Drag & Drop Here, or <b>Browse</b>
+              Drag & Drop Here Or <b>Browse</b>
             </p>
           )}
         </div>
-        <div className="flex justify-center">
           <button
-            className='mt-2 w-3/5 px-4 py-2 bg-skyhopBlue text-white cursor-pointer rounded-lg'
+            className='mt-2 w-3/5 py-4 bg-skyhopBlue text-white cursor-pointer rounded-lg'
             onClick={() => document.getElementById('fileInput')?.click()}
             >
             Upload Manifest
           </button>
-        </div>
         <input
           id='fileInput'
           type='file'

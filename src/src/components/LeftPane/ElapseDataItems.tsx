@@ -1,8 +1,11 @@
 import React from 'react'
+import PaneSectionHeader from '../Common/PaneSectionHeader'
 
 const ElapseDataItems = () => {
   return (
-    <div>ElapseDataItems</div>
+    <div>
+      <PaneSectionHeader title={"Elapse Data Checking"} />
+    </div>
   )
 }
 

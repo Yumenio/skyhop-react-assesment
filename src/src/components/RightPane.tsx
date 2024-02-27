@@ -5,7 +5,7 @@ import Client from './RightPane/Client'
 
 const RightPane = () => {
   return (
-    <div className="w-1/2">
+    <div className="w-1/2 h-5/6">
       <SplitSchedule/>
       <hr className="my-4 border-t-2 border-gray-500 w-3/5"/>
       <LocationChecking/>
