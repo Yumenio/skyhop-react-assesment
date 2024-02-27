@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PaneSectionHeader from '../Common/PaneSectionHeader'
+import SuccessText from '../Common/SuccessText'
 
 const ElapseDataItems = () => {
   const [data, setData] = useState<null | string[]>(null)
@@ -11,7 +12,7 @@ const ElapseDataItems = () => {
           {data.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
       ):(
-        <p className="text-green-500 font-semibold">No Elapsed Dates!</p>
+        <SuccessText text="No Elapsed Dates!" />
       )}
     </div>
   )
