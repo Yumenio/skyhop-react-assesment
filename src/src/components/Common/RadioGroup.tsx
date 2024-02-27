@@ -13,7 +13,7 @@ const RadioGroup:React.FC<RadioGroupProps> = ({options, selectedOption, handleRa
       <label key={index} className="flex items-center text-lg">
         <input
           type="radio"
-          name="scheduleyesno"
+          name={options.reduce( (acc, current) => acc+current)}
           value={option}
           checked={selectedOption === option}
           onChange={() => handleRadioChange(option)}
