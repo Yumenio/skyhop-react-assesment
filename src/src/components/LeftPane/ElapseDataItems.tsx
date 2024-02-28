@@ -6,13 +6,15 @@ const ElapseDataItems = () => {
   const [data, setData] = useState<null | string[]>(null)
   return (
     <div>
-      <PaneSectionHeader title={"Elapse Data Checking"} />
-      {data? (
+      <PaneSectionHeader title={'Elapse Data Checking'} />
+      {data ? (
         <ul>
-          {data.map((item, index) => <li key={index}>{item}</li>)}
+          {data.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
-      ):(
-        <SuccessText text="No Elapsed Dates!" />
+      ) : (
+        <SuccessText text='No Elapsed Dates!' />
       )}
     </div>
   )
